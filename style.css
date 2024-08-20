@@ -1,0 +1,11 @@
+body {
+    background-color: lightblue;
+}
+
+.spacer {
+    height: 200px;
+}
+
+h1, p {
+    text-align: center;
+}
