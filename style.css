@@ -1,5 +1,8 @@
 body {
-    background-color: lightblue;
+    background-image: url("minimalist_iceberg.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #1C2125;
 }
 
 .spacer {
