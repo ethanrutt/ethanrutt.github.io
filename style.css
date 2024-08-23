@@ -12,7 +12,9 @@ h1, p {
 }
 
 table {
-    margin: 5px;
+    margin: auto;
+    table-layout: fixed;
+    width: 80%;
 }
 
 tr {
@@ -20,8 +22,7 @@ tr {
 }
 
 td {
-    width: 33%;
-    height: 100%;
+    padding: 10px;
 }
 
 .title {
@@ -66,21 +67,71 @@ li {
     height: 30%;
 }
 
+.mini-spacer {
+    height: 5%;
+}
+
 .single_experience {
     position: relative;
+    display: block;
     text-align: center;
-    border: 1px solid;
-    background-color: red;
+    background-color: #dddddd;
+    padding: 2px;
+    margin: 2px;
+    height: 100%;
+    width: 100%;
+}
+
+.single_experience:hover .experience-description {
+    opacity: 1;
+}
+
+.single_experience:hover .experience-link {
+    opacity: 1;
+}
+
+.single_experience:hover .experience-image {
+    opacity: 0;
 }
 
 .experience-image {
-    width: 100%;
+    font-size: 3vw;
+    opacity: 1;
+    transition: opacity 0.5s ease;
 }
 
 .experience-description {
     position: absolute;
-    width: 30%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    font-size: 1vw;
 }
+
+.experience-link {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    text-decoration: none;
+    padding: 5px;
+    font-size: 1vw;
+}
+
+.about-container {
+    text-align: center;
+}
+
+.about-p {
+    width: 50%;
+    margin: auto;
+    padding: 10px;
+    background-color: #dddddd;
+}
+
+.social-link {
+    text-decoration: none;
+    background-color: #dddddd;
+    padding: 10px;
+}
+
