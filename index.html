@@ -1,9 +1,101 @@
 <html>
     <head>
         <title>Ethan's Portfolio</title>
+        <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        </style>
+        <link rel=stylesheet href="style.css">
     </head>
     <body>
-        <h1>Ethan's Portfolio Website</h1>
-        <p>WIP</p>
+        <div id="top"></div>
+        <div class="navbar">
+            <ul>
+                <li><a class="navbar-link" href="#top">home</a></li>
+                <li><a class="navbar-link" href="#about">about</a></li>
+                <li><a class="navbar-link" href="#projects">projects</a></li>
+                <li><a class="navbar-link" href="#experience">experience</a></li>
+            </ul>
+        </div>
+        <div class="spacer"></div>
+        <h1 class="title">Hi, my name is Ethan Rutt</h1>
+        <div class="spacer"></div>
+        <div class="spacer"></div>
+        <div class="experience-container">
+            <h2 id="experience" class="title">experience</h2>
+            <table>
+                <tr>
+                    <td>
+                        <div class="single_experience">
+                            <h3 class="experience-image">Renesas Electronics</h3>
+                            <span class="experience-description">I worked two summers at Renesas building a software simulation for our chip configuration, workign with databases, and hardware validation testing</span>
+                            <a class="experience-link" href="https://www.renesas.com/us/en">Website</a>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="single_experience">
+                            <h3 class="experience-image">Texas A&M CompSci</h3>
+                            <span class="experience-description">I was a TA for 2 semesters in Java and Python classes, and also helped develop an autograder that thousands of students use</span>
+                            <a class="experience-link" href="https://engineering.tamu.edu/cse/academics/index.html">Website</a>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="single_experience">
+                            <h3 class="experience-image">Vector Marketing</h2>
+                            <span class="experience-description">Before technical work, I was very successful in direct sales and founded my own sales office, got to recruit, interview, hire, and develop a team of 25 reps </span>
+                            <a class="experience-link" href="https://www.vectormarketing.com/">Website</a>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="spacer"></div>
+        <div class="projects-container">
+            <h2 id="projects" class="title">projects</h2>
+            <table>
+                <tr>
+                    <td>
+                        <div class="single_experience">
+                            <h3 class="experience-image">Dot Files</h3>
+                            <span class="experience-description">I have all of my dotfiles configured and a full system installation automated with ansible for Arch and Ubuntu</span>
+                            <a class="experience-link" href="https://github.com/ethanrutt/dots">Check it out!</a>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="single_experience">
+                            <h3 class="experience-image">Wordle Clone</h3>
+                            <span class="experience-description">Clordle is built with Flask on the backend, and vanilla JS, HTML, CSS on the frontend</span>
+                            <a class="experience-link" href="https://github.com/ethanrutt/clordle">Check it out!</a>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="single_experience">
+                            <h3 class="experience-image">y86 CPU</h2>
+                            <span class="experience-description">Fully functional y86 CPU designed in Logisim from scratch. I cannot link this as it's a proprietary assignment from CSCE 312</span>
+                            <a class="experience-link" href="https://catalog.tamu.edu/undergraduate/course-descriptions/csce/">Check it out!</a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="single_experience">
+                            <h3 class="experience-image">Windowhouse Pottery</h3>
+                            <span class="experience-description">Website run for my mom's pottery hobby built with ReactJS</span>
+                            <a class="experience-link" href="https://github.com/ethanrutt/windowhouse-pottery-site">Check it out!</a>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="spacer"></div>
+        <div class="about-container">
+            <h2 id="about" class="title">about</h2>
+            <img src="images/ethan_headshot.jpg" class="about-img">
+            <div class="mini-spacer"></div>
+            <p class="about-p">Hey, my name is Ethan Rutt. I'm a University Honors Senior Computer Science Student graduating from Texas A&M University @ College Station in May 2025. I really enjoy all things software, but my favorite areas are low level development such as kernel drivers, embedded systems, high performance parallel computing, and distributed and scalable systems. I use Windows and Linux, and love to tinker with my systems to customize them to fit me perfectly. Outside of CS, I enjoy the martial art of Judo, which I've been doing since I was a kid, playing video games, and hanging out with friends.</p>
+            <div class="mini-spacer"></div>
+            <a class="social-link" href="https://www.linkedin.com/in/ethanrutt/" target="_blank">Connect with me on LinkedIn!</a>
+            <a class="social-link" href="https://github.com/ethanrutt" target="_blank">Checkout my Github!</a>
+        </div>
+        <div class="mini-spacer"></div>
     </body>
 </html>
