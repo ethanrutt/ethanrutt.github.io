@@ -17,6 +17,7 @@ div.navbar {
 div.navbar ul {
     display: flex;
     list-style-type: none;
+    padding: 0px;
 }
 
 div.navbar li {
@@ -36,6 +37,7 @@ div.navbar a:hover {
     background-color: #585757;
 }
 
+/* home page styling */
 div.about {
     display: flex;
     width: 90%;
@@ -65,6 +67,7 @@ div.about-image img {
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
 }
 
+/* small width and mobile styling */
 @media (max-width: 768px) {
     div.about {
         flex-direction: column;
@@ -82,10 +85,30 @@ div.about-image img {
         left: 50%;
         transform: translate(-50%, 0%);
     }
+}
 
-    div.navbar ul {
-        /* for some reason, if padding isn't set to 0 then there is a weird 40
-         * px padding on the left of the ul. */
-        padding: 0px;
-    }
+/* end of home page styling */
+/* projects and experience page styling */
+div.knowledge-description-container {
+    padding-top: 80px;
+    width: 40%;
+    margin: auto;
+    text-align: center;
+}
+
+div.knowledge-description {
+    padding: 20px;
+}
+
+div.knowledge-description details {
+    border-radius: 0.25rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease;
+    background-color: #585757;
+    padding: 10px;
+}
+
+div.knowledge-description details:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+    cursor: grab;
 }
