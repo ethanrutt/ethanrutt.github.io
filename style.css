@@ -1,139 +1,168 @@
 body {
-    background-image: url("images/minimalist_iceberg.jpg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-color: #1C2125;
-    color: #3b8ea5;
-    font-family: "Poppins", sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    color: #FCF9FA;
+    background-color: #40444C;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
 }
 
-h1, p {
-    text-align: center;
-}
-
-table {
+div.navbar {
+    position: fixed;
     margin: auto;
-    table-layout: fixed;
-    width: 80%;
+    padding: 5px;
+    max-width: 100%;
 }
 
-tr {
-    height: 100%;
-}
-
-td {
-    padding: 10px;
-}
-
-.title {
-    @media (min-width: 1200px) {
-        text-align: left;
-        margin-left: 5%;
-    }
-
-    @media (max-width: 1200px) {
-        text-align: center;
-    }
-}
-
-
-ul {
+div.navbar ul {
+    display: flex;
     list-style-type: none;
+    padding: 0px;
 }
 
-li {
+div.navbar li {
     float: right;
 }
 
-.navbar-link {
+div.navbar a {
     display: block;
     padding: 9px;
     color: #dddddd;
     transition: 0.5s;
     text-decoration: none;
+    border-radius: 0.25rem;
 }
 
-.navbar-link:hover {
-    background-color: #827191;
-    color: #1C2125;
+div.navbar a:hover {
+    background-color: #585757;
 }
 
-.navbar {
-    position: fixed;
+/* home page styling */
+div.about {
+    display: flex;
+    width: 90%;
+    align-items: flex-start;
+    gap: 40px;
     margin: auto;
+    /* the navbar is 80 px tall so we add padding of exactly 80 so that the
+     * navbar doesn't block any content unless you scroll */
+    padding-top: 80px;
 }
 
-.spacer {
-    height: 30%;
+div.about-text {
+    flex: 2;
 }
 
-.mini-spacer {
-    height: 5%;
+div.about-text p {
+    font-size: 20px;
 }
 
-.single_experience {
-    position: relative;
-    display: block;
-    text-align: center;
-    background-color: #dddddd;
-    padding: 2px;
-    margin: 2px;
-    height: 100%;
+div.about-text a:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+    transform: scale(1.05);
+}
+
+div.about-image {
+    flex: 1;
+}
+
+div.about-image img {
     width: 100%;
+    border-radius: 0.25rem;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
 }
 
-.single_experience:hover .experience-description {
-    opacity: 1;
+div.about-links {
+    margin: auto;
+    justify-content: center;
 }
 
-.single_experience:hover .experience-link {
-    opacity: 1;
-}
-
-.single_experience:hover .experience-image {
-    opacity: 0;
-}
-
-.experience-image {
-    font-size: 3vw;
-    opacity: 1;
-    transition: opacity 0.5s ease;
-}
-
-.experience-description {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0;
-    transition: opacity 0.5s ease;
-    font-size: 1vw;
-}
-
-.experience-link {
-    opacity: 0;
-    transition: opacity 0.5s ease;
+div.about-links a {
+    font-size: 20px;
+    display: block;
+    padding: 9px;
+    color: #40444C;
+    background-color: #FCF9FA;
+    width: 195px;
+    text-align: center;
+    transition: 0.5s ease;
     text-decoration: none;
-    padding: 5px;
-    font-size: 1vw;
-    color: #3b8ea5;
+    border-radius: 0.25rem;
+    margin: 10px;
 }
 
-.about-container {
+div.about-links {
+    display: flex;
+}
+
+/* small width and mobile styling */
+@media (max-width: 768px) {
+    div.about {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    div.about-text,
+    div.about-image {
+        flex: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    div.navbar {
+        left: 50%;
+        transform: translate(-50%, 0%);
+    }
+}
+
+/* end of home page styling */
+/* projects and experience page styling */
+div.knowledge-description-container {
+    padding-top: 80px;
+
+    @media (max-width: 768px) {
+        width: 70%;
+    }
+
+    @media (min-width: 768px) {
+        width: 40%;
+    }
+
+    margin: auto;
     text-align: center;
 }
 
-.about-p {
-    width: 50%;
+div.knowledge-description {
+    padding: 20px;
+}
+
+div.knowledge-description details {
+    border-radius: 0.25rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease;
+    background-color: #585757;
+    padding: 10px;
+    min-width: 40vw;
+}
+
+div.knowledge-description details:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+    cursor: grab;
+}
+
+div.knowledge-description a {
+    display: block;
+    padding: 9px;
+    color: #FCF9FA;
     margin: auto;
-    padding: 10px;
-    background-color: #dddddd;
-}
-
-.social-link {
+    width: 135px;
+    transition: 0.5s;
     text-decoration: none;
-    background-color: #dddddd;
-    padding: 10px;
-    color: #3b8ea5;
+    border-radius: 0.25rem;
 }
 
+div.knowledge-description a:hover {
+    color: #40444C;
+    background-color: #FCF9FA;
+}
