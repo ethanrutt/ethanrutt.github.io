@@ -5,6 +5,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 div.navbar {
@@ -57,6 +58,11 @@ div.about-text p {
     font-size: 20px;
 }
 
+div.about-text a:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+    transform: scale(1.05);
+}
+
 div.about-image {
     flex: 1;
 }
@@ -65,6 +71,29 @@ div.about-image img {
     width: 100%;
     border-radius: 0.25rem;
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+div.about-links {
+    margin: auto;
+    justify-content: center;
+}
+
+div.about-links a {
+    font-size: 20px;
+    display: block;
+    padding: 9px;
+    color: #40444C;
+    background-color: #FCF9FA;
+    width: 195px;
+    text-align: center;
+    transition: 0.5s ease;
+    text-decoration: none;
+    border-radius: 0.25rem;
+    margin: 10px;
+}
+
+div.about-links {
+    display: flex;
 }
 
 /* small width and mobile styling */
@@ -91,7 +120,15 @@ div.about-image img {
 /* projects and experience page styling */
 div.knowledge-description-container {
     padding-top: 80px;
-    width: 40%;
+
+    @media (max-width: 768px) {
+        width: 70%;
+    }
+
+    @media (min-width: 768px) {
+        width: 40%;
+    }
+
     margin: auto;
     text-align: center;
 }
@@ -106,9 +143,26 @@ div.knowledge-description details {
     transition: box-shadow 0.3s ease;
     background-color: #585757;
     padding: 10px;
+    min-width: 40vw;
 }
 
 div.knowledge-description details:hover {
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
     cursor: grab;
+}
+
+div.knowledge-description a {
+    display: block;
+    padding: 9px;
+    color: #FCF9FA;
+    margin: auto;
+    width: 135px;
+    transition: 0.5s;
+    text-decoration: none;
+    border-radius: 0.25rem;
+}
+
+div.knowledge-description a:hover {
+    color: #40444C;
+    background-color: #FCF9FA;
 }
