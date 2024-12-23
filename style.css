@@ -35,6 +35,7 @@ div.navbar ul {
     display: flex;
     list-style-type: none;
     padding: 0px;
+    margin: auto;
 }
 
 div.navbar li {
@@ -58,6 +59,7 @@ div.navbar a:hover {
     }
 }
 
+
 /* home page styling */
 div.about {
     display: flex;
@@ -73,7 +75,7 @@ div.about {
     padding-top: 80px;
 
     @media (max-width: 768px) {
-        padding-top: 100px;
+        padding-top: 70px;
         flex-direction: column;
         align-items: center;
     }
@@ -134,6 +136,7 @@ div.about-links a:hover {
     }
 }
 
+
 /* end of home page styling */
 /* projects and experience page styling */
 div.knowledge-description-container {
@@ -165,6 +168,10 @@ div.knowledge-description details:hover {
     cursor: grab;
 }
 
+div.knowledge-description details>summary {
+    list-style: none;
+}
+
 div.knowledge-description a {
     font-size: 20px;
     display: block;
@@ -183,4 +190,49 @@ div.knowledge-description a {
 div.knowledge-description a:hover {
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
     transform: scale(1.05);
+}
+
+
+/* this is for the dropdown button that we want to flip and shadow to flip when
+ * details are open */
+.dropdown-arrow-down {
+    color: #FCF9FA;
+    background-color: #837799;
+    width: 30px;
+    height: 25px;
+    margin: auto;
+    border-radius: 0.25rem;
+    box-shadow: 5px 3px 5px 0px rgba(0, 0, 0, 0.4);
+    transition: 0.2s ease;
+}
+
+.dropdown-arrow-down:hover {
+    transform: scale(1.05);
+}
+
+.dropdown-arrow-up {
+    color: #FCF9FA;
+    background-color: #837799;
+    width: 30px;
+    height: 25px;
+    margin: auto;
+    border-radius: 0.25rem;
+    box-shadow: -5px -3px 5px 0px rgba(0, 0, 0, 0.4);
+    transition: 0.2s ease;
+    transform: rotate(180deg);
+}
+
+.dropdown-arrow-up:hover {
+    transform: rotate(180deg) scale(1.05);
+}
+
+
+/* this is for the horizontal line on the details that we only want to display
+ * when they are open */
+.visible {
+    visibility: visible;
+}
+
+.invisible {
+    visibility: hidden;
 }
