@@ -8,11 +8,13 @@ body {
     overflow-x: hidden;
 }
 
-h1, h2, h3 {
-  font-family: "Bebas Neue", serif;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal;
+h1,
+h2,
+h3 {
+    font-family: "Bebas Neue", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
 }
 
 div.navbar {
@@ -20,6 +22,13 @@ div.navbar {
     margin: auto;
     padding: 5px;
     max-width: 100%;
+
+    @media (max-width: 768px) {
+        background-color: #837799;
+        border-radius: 0.25rem;
+        left: 50%;
+        transform: translate(-50%, 0%);
+    }
 }
 
 div.navbar ul {
@@ -43,6 +52,10 @@ div.navbar a {
 
 div.navbar a:hover {
     background-color: #585757;
+
+    @media (max-width: 768px) {
+        background-color: #6a607d;
+    }
 }
 
 /* home page styling */
@@ -52,9 +65,18 @@ div.about {
     align-items: flex-start;
     gap: 40px;
     margin: auto;
+
     /* the navbar is 80 px tall so we add padding of exactly 80 so that the
-     * navbar doesn't block any content unless you scroll */
+     * navbar doesn't block any content unless you scroll, unless we are on
+     * mobile which adds a background behind nav bar so we need a little extra
+     * space */
     padding-top: 80px;
+
+    @media (max-width: 768px) {
+        padding-top: 100px;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 div.about-text {
@@ -103,10 +125,6 @@ div.about-links a:hover {
 
 /* small width and mobile styling */
 @media (max-width: 768px) {
-    div.about {
-        flex-direction: column;
-        align-items: center;
-    }
 
     div.about-text,
     div.about-image {
@@ -114,28 +132,19 @@ div.about-links a:hover {
         width: 100%;
         text-align: center;
     }
-
-    div.navbar {
-        left: 50%;
-        transform: translate(-50%, 0%);
-    }
 }
 
 /* end of home page styling */
 /* projects and experience page styling */
 div.knowledge-description-container {
     padding-top: 80px;
+    width: 40%;
+    margin: auto;
+    text-align: center;
 
     @media (max-width: 768px) {
         width: 70%;
     }
-
-    @media (min-width: 768px) {
-        width: 40%;
-    }
-
-    margin: auto;
-    text-align: center;
 }
 
 div.knowledge-description {
