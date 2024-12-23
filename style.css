@@ -168,8 +168,15 @@ div.knowledge-description details:hover {
     cursor: grab;
 }
 
+/* get rid of arrow in details */
 div.knowledge-description details>summary {
     list-style: none;
+}
+
+/* mobile browsers still show it even with above css so we need this too */
+div.knowledge-description details>summary::marker,
+div.knowledge-description details>summary::-webkit-details-marker {
+    display: none;
 }
 
 div.knowledge-description a {
