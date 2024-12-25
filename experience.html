@@ -28,204 +28,227 @@
         </ul>
     </div>
 
-    <div class="knowledge-description-container">
-        <div class="knowledge-description">
-            <details open>
-                <summary>
-                    <h1>Renesas Electronics 2</h1>
-                    <img class="dropdown-arrow-up" src="/images/dropdown_arrow.png">
-                    <hr class="visible"></hr>
-                </summary>
-                <p>
-                    Software Validation Engineer : May - August 2024
-                </p>
-                <p>
-                    Renesas Electronics is a semiconductor company. I worked in
-                    the Austin branch that makes voltage regulator chips.
-                </p>
-                <p>
-                    This summer, I began by working with the Validation
-                    Team's test database. I wanted to create a nice report
-                    that concisely gave the current progress so that these
-                    could be shown to managers and executives.
-                </p>
-                <p>
-                    After completing this, I then took a step into the
-                    hardware world, where I rewrote an existing test. The
-                    test involved throttling the enable pin of one of our
-                    microcontrollers to make sure that it still behaved as
-                    intended. This required learning about things that a
-                    software engineer wouldn't normally learn about, so it
-                    was very fun to take a deep dive into the hardware
-                    world. I ended up successfully rewriting the test and
-                    finding an existing firmware bug in a chip that was
-                    already in production.
-                </p>
-                <hr></hr>
-                <img
-                    src="https://img.shields.io/static/v1?logo=python&label=&message=python&color=3776AB&logoColor=AAA&style=flat-square">
-                <img
-                    src="https://img.shields.io/static/v1?logo=jinja&label=&message=jinja&color=B41717&logoColor=AAA&style=flat-square">
-                <img
-                    src="https://img.shields.io/static/v1?logo=jupyter&label=&message=jupyter&color=F37626&logoColor=000&style=flat-square">
-                <img
-                    src="https://img.shields.io/static/v1?label=&message=edgedb&color=837799&logoColor=AAA&style=flat-square">
-                <img
-                    src="https://img.shields.io/static/v1?label=&message=oscilloscopes&color=837799&logoColor=AAA&style=flat-square">
-            </details>
+    <div class="short-about-container">
+        <img src="images/ethan_headshot_cropped.jpg">
+        <h1>Ethan Rutt</h1>
+        <div class="short-about-buttons">
+            <a href="https://github.com/ethanrutt" target="_blank">Github</a>
+            <a href="https://www.linkedin.com/in/ethanrutt/" target="_blank">LinkedIn</a>
         </div>
-        <div class="knowledge-description">
-            <details>
-                <summary>
-                    <h1>Renesas Electronics 1</h1>
-                    <img class="dropdown-arrow-down" src="/images/dropdown_arrow.png">
-                    <hr class="invisible"></hr>
-                </summary>
-                <p>
-                    Software Engineer : May - August 2023
-                </p>
-                <p>
-                    Renesas Electronics is a semiconductor company. I worked in
-                    the Austin branch that makes voltage regulator chips.
-                </p>
-                <p>
-                    This summer, I worked on an ambitious project called the
-                    Factor Engine. The background of this project was that
-                    the people who design the chips had a very annoying and
-                    difficult workflow. It involved designing in verilog,
-                    then defining their tests in these peculiar csv files
-                    with c preprocessor notation in the cells. These were
-                    then run through a scala parser and output tests that
-                    they could use. This was a very bad workflow. On top of
-                    this, the validation and GUI teams also would like to
-                    use these tests and configurations, but they couldn't
-                    because of a difference of technologies. The Factor
-                    Engine wanted to fix that by unifying the chip
-                    configuration into one structure, able to model a chip
-                    in memory for use in the GUI, the Validation tools, and
-                    the Design simulation tests.
-                </p>
-                <p>
-                    This involved recreating the chip definitions in c++,
-                    creating c bindings for them, then outputting Java and
-                    Python bindings through ctypes and jna. I was able to
-                    work on this and made great strides in modeling the
-                    registers and getting the windows builds set up. I
-                    learned so much about software engineering, version
-                    control, the interactions between c and c++, and much
-                    more.
-                </p>
-                <hr></hr>
-                <img
-                    src="https://img.shields.io/static/v1?logo=c&label=&message=c&color=A8B9CC&logoColor=000&style=flat-square">
-                <img
-                    src="https://img.shields.io/static/v1?logo=cplusplus&label=&message=cpp&color=00599C&logoColor=AAA&style=flat-square">
-                <img
-                    src="https://img.shields.io/static/v1?logo=cmake&label=&message=cmake&color=064F8C&logoColor=AAA&style=flat-square">
-                <img
-                    src="https://img.shields.io/static/v1?logo=gitlab&label=&message=gitlab&color=FC6D26&logoColor=000&style=flat-square">
-                <img
-                    src="https://img.shields.io/static/v1?logo=python&label=&message=python&color=3776AB&logoColor=AAA&style=flat-square">
-                <img
-                    src="https://img.shields.io/static/v1?logo=kotlin&label=&message=kotlin&color=7F52FF&logoColor=AAA&style=flat-square">
-            </details>
+    </div>
+
+    <div class="flex-container">
+        <div class="one-third"></div>
+        <div class="knowledge-container">
+            <div class="knowledge-description-container">
+                <div class="knowledge-description">
+                    <details open>
+                        <summary>
+                            <h1>Renesas Electronics 2</h1>
+                            <img class="dropdown-arrow-up" src="/images/dropdown_arrow.png">
+                            <hr class="visible">
+                            </hr>
+                        </summary>
+                        <p>
+                            Software Validation Engineer : May - August 2024
+                        </p>
+                        <p>
+                            Renesas Electronics is a semiconductor company. I worked in
+                            the Austin branch that makes voltage regulator chips.
+                        </p>
+                        <p>
+                            This summer, I began by working with the Validation
+                            Team's test database. I wanted to create a nice report
+                            that concisely gave the current progress so that these
+                            could be shown to managers and executives.
+                        </p>
+                        <p>
+                            After completing this, I then took a step into the
+                            hardware world, where I rewrote an existing test. The
+                            test involved throttling the enable pin of one of our
+                            microcontrollers to make sure that it still behaved as
+                            intended. This required learning about things that a
+                            software engineer wouldn't normally learn about, so it
+                            was very fun to take a deep dive into the hardware
+                            world. I ended up successfully rewriting the test and
+                            finding an existing firmware bug in a chip that was
+                            already in production.
+                        </p>
+                        <hr>
+                        </hr>
+                        <img
+                            src="https://img.shields.io/static/v1?logo=python&label=&message=python&color=3776AB&logoColor=AAA&style=flat-square">
+                        <img
+                            src="https://img.shields.io/static/v1?logo=jinja&label=&message=jinja&color=B41717&logoColor=AAA&style=flat-square">
+                        <img
+                            src="https://img.shields.io/static/v1?logo=jupyter&label=&message=jupyter&color=F37626&logoColor=000&style=flat-square">
+                        <img
+                            src="https://img.shields.io/static/v1?label=&message=edgedb&color=837799&logoColor=AAA&style=flat-square">
+                        <img
+                            src="https://img.shields.io/static/v1?label=&message=oscilloscopes&color=837799&logoColor=AAA&style=flat-square">
+                    </details>
+                </div>
+                <div class="knowledge-description">
+                    <details>
+                        <summary>
+                            <h1>Renesas Electronics 1</h1>
+                            <img class="dropdown-arrow-down" src="/images/dropdown_arrow.png">
+                            <hr class="invisible">
+                            </hr>
+                        </summary>
+                        <p>
+                            Software Engineer : May - August 2023
+                        </p>
+                        <p>
+                            Renesas Electronics is a semiconductor company. I worked in
+                            the Austin branch that makes voltage regulator chips.
+                        </p>
+                        <p>
+                            This summer, I worked on an ambitious project called the
+                            Factor Engine. The background of this project was that
+                            the people who design the chips had a very annoying and
+                            difficult workflow. It involved designing in verilog,
+                            then defining their tests in these peculiar csv files
+                            with c preprocessor notation in the cells. These were
+                            then run through a scala parser and output tests that
+                            they could use. This was a very bad workflow. On top of
+                            this, the validation and GUI teams also would like to
+                            use these tests and configurations, but they couldn't
+                            because of a difference of technologies. The Factor
+                            Engine wanted to fix that by unifying the chip
+                            configuration into one structure, able to model a chip
+                            in memory for use in the GUI, the Validation tools, and
+                            the Design simulation tests.
+                        </p>
+                        <p>
+                            This involved recreating the chip definitions in c++,
+                            creating c bindings for them, then outputting Java and
+                            Python bindings through ctypes and jna. I was able to
+                            work on this and made great strides in modeling the
+                            registers and getting the windows builds set up. I
+                            learned so much about software engineering, version
+                            control, the interactions between c and c++, and much
+                            more.
+                        </p>
+                        <hr>
+                        </hr>
+                        <img
+                            src="https://img.shields.io/static/v1?logo=c&label=&message=c&color=A8B9CC&logoColor=000&style=flat-square">
+                        <img
+                            src="https://img.shields.io/static/v1?logo=cplusplus&label=&message=cpp&color=00599C&logoColor=AAA&style=flat-square">
+                        <img
+                            src="https://img.shields.io/static/v1?logo=cmake&label=&message=cmake&color=064F8C&logoColor=AAA&style=flat-square">
+                        <img
+                            src="https://img.shields.io/static/v1?logo=gitlab&label=&message=gitlab&color=FC6D26&logoColor=000&style=flat-square">
+                        <img
+                            src="https://img.shields.io/static/v1?logo=python&label=&message=python&color=3776AB&logoColor=AAA&style=flat-square">
+                        <img
+                            src="https://img.shields.io/static/v1?logo=kotlin&label=&message=kotlin&color=7F52FF&logoColor=AAA&style=flat-square">
+                    </details>
+                </div>
+                <div class="knowledge-description">
+                    <details>
+                        <summary>
+                            <h1>Vector Marketing 2</h1>
+                            <img class="dropdown-arrow-down" src="/images/dropdown_arrow.png">
+                            <hr class="invisible">
+                            </hr>
+                        </summary>
+                        <p>
+                            Branch Manager : May - August 2022
+                        </p>
+                        <p>
+                            Vector Marketing is a direct sales company that sells Cutco
+                            Knives. I founded my own sales office based out of
+                            Bastrop, TX.
+                        </p>
+                        <p>
+                            This summer, I founded my own sales office, recruited,
+                            interviewed, trained, and developed a team of 25+ Cutco
+                            Sales Representatives to sell over $30k worth of
+                            kitchen knives.
+                        </p>
+                        <p>
+                            This was something that isn't like my character. I was
+                            never a super outgoing person, so the fact that I could
+                            do this really proved to myself that I can do whatever
+                            I set my mind to. At the beginning of the summer I had
+                            many hard weeks where I had no money coming in, but
+                            once I got off the ground in mid June, I never looked
+                            back. The bulk of the $30k that I sold was in late July
+                            and August, because at that point my team had so much
+                            momentum. I learned many lessons throughout this summer
+                            and I believe my soft skills developed so much for
+                            having done this.
+                        </p>
+                        <hr>
+                        </hr>
+                        <img
+                            src="https://img.shields.io/static/v1?logo=zoom&label=&message=zoom&color=0B5CFF&logoColor=AAA&style=flat-square">
+                        <img
+                            src="https://img.shields.io/static/v1?label=&message=sales&color=837799&logoColor=AAA&style=flat-square">
+                        <img
+                            src="https://img.shields.io/static/v1?label=&message=marketing&color=837799&logoColor=AAA&style=flat-square">
+                        <img
+                            src="https://img.shields.io/static/v1?label=&message=interviewing&color=837799&logoColor=AAA&style=flat-square">
+                    </details>
+                </div>
+                <div class="knowledge-description">
+                    <details>
+                        <summary>
+                            <h1>Vector Marketing 1</h1>
+                            <img class="dropdown-arrow-down" src="/images/dropdown_arrow.png">
+                            <hr class="invisible">
+                            </hr>
+                        </summary>
+                        <p>
+                            Field Sales Manager : June 2021 - May 2022
+                        </p>
+                        <p>
+                            Vector Marketing is a direct sales company that sells Cutco
+                            Knives. I founded my own sales office based out of
+                            Bastrop, TX.
+                        </p>
+                        <p>
+                            This summer and throughout my first year of college, I was
+                            working and selling kitchen knives. I joined in June
+                            and sold $10k within the first week of being on the
+                            job. I then continued throughout the rest of the summer
+                            to sell around $30k personally by networking, setting
+                            appointments, and doing in person demonstrations with
+                            potential clients.
+                        </p>
+                        <p>
+                            I was then accepted into the fair and show events team,
+                            where I was able to seek out small events such as
+                            farmers markets and market days, where I set up a booth
+                            and sold for the duration of the event. This required
+                            scheduling, talking to event promoters, setting up
+                            booths, and handling other admin tasks that were
+                            required to be on the events team. I did all of this
+                            while taking classes at Texas A&M.
+                        </p>
+                        <p>
+                            On top of the events team, I was also accepted into the
+                            manager in training program, where I learned different
+                            management skills and prepared to open my own sales
+                            office for a summer (see Vector Marketing 2). This
+                            involved weekly meetings, running interviews, and more
+                            while also taking classes at Texas A&M.
+                        </p>
+                        <hr>
+                        </hr>
+                        <img
+                            src="https://img.shields.io/static/v1?logo=zoom&label=&message=zoom&color=0B5CFF&logoColor=AAA&style=flat-square">
+                        <img
+                            src="https://img.shields.io/static/v1?label=&message=sales&color=837799&logoColor=AAA&style=flat-square">
+                        <img
+                            src="https://img.shields.io/static/v1?label=&message=marketing&color=837799&logoColor=AAA&style=flat-square">
+                    </details>
+                </div>
+            </div>
         </div>
-        <div class="knowledge-description">
-            <details>
-                <summary>
-                    <h1>Vector Marketing 2</h1>
-                    <img class="dropdown-arrow-down" src="/images/dropdown_arrow.png">
-                    <hr class="invisible"></hr>
-                </summary>
-                <p>
-                    Branch Manager : May - August 2022
-                </p>
-                <p>
-                    Vector Marketing is a direct sales company that sells Cutco
-                    Knives. I founded my own sales office based out of
-                    Bastrop, TX.
-                </p>
-                <p>
-                    This summer, I founded my own sales office, recruited,
-                    interviewed, trained, and developed a team of 25+ Cutco
-                    Sales Representatives to sell over $30k worth of
-                    kitchen knives.
-                </p>
-                <p>
-                    This was something that isn't like my character. I was
-                    never a super outgoing person, so the fact that I could
-                    do this really proved to myself that I can do whatever
-                    I set my mind to. At the beginning of the summer I had
-                    many hard weeks where I had no money coming in, but
-                    once I got off the ground in mid June, I never looked
-                    back. The bulk of the $30k that I sold was in late July
-                    and August, because at that point my team had so much
-                    momentum. I learned many lessons throughout this summer
-                    and I believe my soft skills developed so much for
-                    having done this.
-                </p>
-                <hr></hr>
-                <img
-                    src="https://img.shields.io/static/v1?logo=zoom&label=&message=zoom&color=0B5CFF&logoColor=AAA&style=flat-square">
-                <img
-                    src="https://img.shields.io/static/v1?label=&message=sales&color=837799&logoColor=AAA&style=flat-square">
-                <img
-                    src="https://img.shields.io/static/v1?label=&message=marketing&color=837799&logoColor=AAA&style=flat-square">
-                <img
-                    src="https://img.shields.io/static/v1?label=&message=interviewing&color=837799&logoColor=AAA&style=flat-square">
-            </details>
-        </div>
-        <div class="knowledge-description">
-            <details>
-                <summary>
-                    <h1>Vector Marketing 1</h1>
-                    <img class="dropdown-arrow-down" src="/images/dropdown_arrow.png">
-                    <hr class="invisible"></hr>
-                </summary>
-                <p>
-                    Field Sales Manager : June 2021 - May 2022
-                </p>
-                <p>
-                    Vector Marketing is a direct sales company that sells Cutco
-                    Knives. I founded my own sales office based out of
-                    Bastrop, TX.
-                </p>
-                <p>
-                    This summer and throughout my first year of college, I was
-                    working and selling kitchen knives. I joined in June
-                    and sold $10k within the first week of being on the
-                    job. I then continued throughout the rest of the summer
-                    to sell around $30k personally by networking, setting
-                    appointments, and doing in person demonstrations with
-                    potential clients.
-                </p>
-                <p>
-                    I was then accepted into the fair and show events team,
-                    where I was able to seek out small events such as
-                    farmers markets and market days, where I set up a booth
-                    and sold for the duration of the event. This required
-                    scheduling, talking to event promoters, setting up
-                    booths, and handling other admin tasks that were
-                    required to be on the events team. I did all of this
-                    while taking classes at Texas A&M.
-                </p>
-                <p>
-                    On top of the events team, I was also accepted into the
-                    manager in training program, where I learned different
-                    management skills and prepared to open my own sales
-                    office for a summer (see Vector Marketing 2). This
-                    involved weekly meetings, running interviews, and more
-                    while also taking classes at Texas A&M.
-                </p>
-                <hr></hr>
-                <img
-                    src="https://img.shields.io/static/v1?logo=zoom&label=&message=zoom&color=0B5CFF&logoColor=AAA&style=flat-square">
-                <img
-                    src="https://img.shields.io/static/v1?label=&message=sales&color=837799&logoColor=AAA&style=flat-square">
-                <img
-                    src="https://img.shields.io/static/v1?label=&message=marketing&color=837799&logoColor=AAA&style=flat-square">
-            </details>
-        </div>
+    </div>
 </body>
 
 </html>

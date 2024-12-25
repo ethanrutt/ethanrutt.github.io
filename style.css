@@ -3,6 +3,7 @@ body {
     color: #FCF9FA;
     background-color: #40444C;
     background-image: radial-gradient(#373B41, #535962);
+    background-attachment: fixed;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
@@ -148,13 +149,83 @@ div.about-links a:hover {
 
 /* end of home page styling */
 /* projects and experience page styling */
-div.knowledge-description-container {
-    padding-top: 80px;
-    width: 40%;
+div.short-about-container {
+    width: 330px;
+    position: fixed;
+    padding-top: 100px;
+    padding-left: 50px;
     margin: auto;
     text-align: center;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1024px) {
+        position: static;
+        padding-left: 0px;
+    }
+}
+
+div.short-about-container h1 {
+    margin: 10px;
+}
+
+div.short-about-container img {
+    width: 100%;
+    border-radius: 0.25rem;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+div.short-about-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+div.short-about-buttons a {
+    display: block;
+    padding: 9px;
+    color: #40444C;
+    background-color: #FCF9FA;
+    width: 75px;
+    text-align: center;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    transition: 0.5s ease;
+    text-decoration: none;
+    border-radius: 0.25rem;
+    margin: 10px;
+}
+
+div.short-about-buttons a:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+    transform: scale(1.05);
+}
+
+/* this is a little hacky, to see what I am going for here check out index.html
+ * flexbox. The left 1/3 is an empty div just to get the right 2/3 div to take
+ * up the right amount of space*/
+div.flex-container {
+    display: flex;
+}
+
+div.one-third {
+    flex: 1;
+    @media (max-width: 1024px) {
+        visibility: hidden;
+        flex: 0;
+    }
+}
+
+div.knowledge-container {
+    flex: 2;
+    @media (max-width: 1024px) {
+        flex: 1
+    }
+}
+
+div.knowledge-description-container {
+    padding-top: 80px;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+
+    @media (max-width: 1024px) {
         width: 70%;
     }
 }
