@@ -2,6 +2,7 @@ body {
     font-family: "Montserrat", sans-serif;
     color: #FCF9FA;
     background-color: #40444C;
+    background-image: radial-gradient(#40444C, #656A75);
     justify-content: center;
     align-items: center;
     min-height: 100vh;
