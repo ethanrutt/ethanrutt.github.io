@@ -87,8 +87,15 @@ div.about-text {
     flex: 2;
 }
 
-div.about-text p {
-    font-size: 20px;
+div.about-text p>a {
+    color: #FCF9FA;
+    font-weight: 800;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+div.about-text p>a:hover {
+    color: #837799;
 }
 
 div.about-image {
