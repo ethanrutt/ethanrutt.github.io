@@ -7,6 +7,8 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    max-width: 1440px;
+    margin: auto;
     overflow-x: hidden;
 }
 
@@ -221,6 +223,7 @@ div.knowledge-container {
 }
 
 div.knowledge-description-container {
+    max-width: 1000px;
     padding-top: 80px;
     width: 80%;
     margin: auto;
