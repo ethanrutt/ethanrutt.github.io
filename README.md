@@ -10,3 +10,6 @@ sudo pacman -S pandoc-cli
 ```
 
 Then run pandoc
+```sh
+pandoc -f markdown path/to/file > file.html
+```
