@@ -22,10 +22,6 @@ h3 {
     margin-top: 0px;
 }
 
-img {
-    width: 100%;
-}
-
 div.navbar {
     position: fixed;
     margin: auto;
@@ -330,4 +326,8 @@ div.knowledge-description a:hover {
 
 .invisible {
     visibility: hidden;
+}
+
+.blog-img {
+    width: 100%;
 }
