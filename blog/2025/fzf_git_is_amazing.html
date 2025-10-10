@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ethan's Blog</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Blog Website for Ethan Rutt">
+    <meta name="keywords" content="Portfolio, Blog, Ethan, ethanrutt, HTML, CSS, JavaScript, Python, C++, c++, C, c">
+    <meta name="author" content="Ethan Rutt">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/images/ethan_pixelart.png?" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="/style.css" rel="stylesheet">
+    <script src="/script.js"></script>
+</head>
+
+<body>
+    <div class="navbar">
+        <ul>
+            <li><a href="/index.html">home</a></li>
+            <li><a href="/experience.html">experience</a></li>
+            <li><a href="/projects.html">projects</a></li>
+            <li><a href="/blog/index.html">blog</a></li>
+        </ul>
+    </div>
+
+    <h1 style="padding-top: 80px;">FZF Git is Amazing</h1>
+
+    <p>I’m sure you’ve heard of <code>git</code>. I’m not as sure, but still
+        pretty sure you’ve heard of <code>fzf</code>. If you haven’t heard of
+        <code>fzf</code> then close this tab and go back to whatever you were
+        doing before. Maybe look up <code>fzf</code>. Maybe install it and play
+        around with it. But this information is not for you until your eyes have
+        been opened.
+    </p>
+    <p>If you have heard of <code>fzf</code>, have you heard of
+        <code>fzf-git</code>? Maybe <code>fzf.vim</code> or
+        <code>fzf-lua</code>? These are all awesome integrations that make stuff
+        easier. I honestly don’t know how I did anything before I had these
+        tools.
+    </p>
+    <h3 id="what-does-this-fix">What Does This Fix?</h3>
+    <p>Have you ever typed out something extremely long (😉) in the terminal
+        like a commit hash, filename, branch, hit enter, and then was off by one
+        character? Maybe you are a little smarter about it and use tab
+        autocomplete or copy paste from your browser? There is still a better
+        and faster way to do this.</p>
+    <p>In a keyboard focused workflow, we want to avoid going to the browser
+        to copy and paste stuff like commit hashes or branches. If we have to go
+        to the browser to copy two different commit hashes or branches, then we
+        have already wasted so much time.</p>
+    <p>Instead of that, we can use <code>fzf-git</code>.</p>
+    <p>I’m not going to go through the installation and keybinds, all that
+        is available in the <a href="https://github.com/junegunn/fzf-git.sh">repository</a>. I am going
+        to go through some practical examples of how I use this tool in my
+        day-to-day git operations to go <em>blazingly fast</em></p>
+    <h3 id="branches">Branches</h3>
+    <p>Say your coworker creates a new branch called <code>asdf</code>, and
+        you want to check this branch out. This will not be on your branch list
+        since it’s not checked out to your system yet, and to explicitly define
+        it, you will have to get the branch from remote. This could be something
+        like copy pasting it or checking your remotes and copying it from there.
+        You will often have to write out <code>origin/branchname</code> or
+        something similar.</p>
+    <p>With <code>fzf-git</code>, I can do this much easier.</p>
+    <div class="sourceCode" id="cb1">
+        <pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"
+                        tabindex="-1"></a><span class="fu">git</span> switch <span class="at">-t</span> <span
+                        class="op">&lt;</span>C-g<span class="op">&gt;&lt;</span>C-b<span
+                        class="op">&gt;</span></span></code></pre>
+    </div>
+    <img src="/images/fzf_git_is_amazing_branches.png">
+    <p>This pulls up the <code>Branches</code> picker. I can then press
+        <code>&lt;M-a&gt;</code> to show all branches, including branches from
+        remote, fuzzy find to my branch, and then hit enter to select it. Now it
+        is pasted right in the command. In larger projects we often have a
+        naming convention for branches, so they can get rather long and might
+        have some boiler plate like a ticket name before the actual branch name,
+        i.e. <code>ASDF123-actual-branch-name</code>. Having to type that out is
+        a pain, and going to the browser to copy it can also be a pain. I can
+        instead just fuzzy find starting with <code>actual-branch-name</code>
+        and <code>fzf</code> will find it.
+    </p>
+    <h3 id="commit-hashes">Commit Hashes</h3>
+    <p>This is by far the most useful feature, diffing between commits,
+        cherry picking commits, looking at diffs for various commits, and a ton
+        more are made super easy with this. You can fuzzy find by commit
+        message, and the hash is output with this command, so instead of
+        tracking down commit hashes and copy pasting them to the diff command,
+        you can just do</p>
+    <div class="sourceCode" id="cb2">
+        <pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"
+                        tabindex="-1"></a><span class="fu">git</span> diff <span class="op">&lt;</span>C-g<span
+                        class="op">&gt;&lt;</span>C-h<span class="op">&gt;</span> <span class="op">&lt;</span>C-g<span
+                        class="op">&gt;&lt;</span>C-h<span class="op">&gt;</span></span></code></pre>
+    </div>
+    <img src="/images/fzf_git_is_amazing_hashes.png">
+    <p>and search through your hashes by the actual hash itself. I also find
+        this handier than <code>git log</code> since I can see additional
+        information like what was in the commit in the preview window. I find
+        myself just going <code>&lt;C-g&gt;&lt;C-h&gt;</code> instead of typing
+        <code>git log</code> or <code>git log --oneline</code>.
+    </p>
+    <h3 id="files">Files</h3>
+    <p>Working with files is already a pain, and if you are still using tab
+        autocomplete for deeply nested files, this is the time to stop. If you
+        have the <code>fzf</code> keybinds set up, you know that you can do
+        <code>&lt;C-t&gt;</code> to pull up a file fuzzy finder. This is nice,
+        but we can take it one step further with
+        <code>&lt;C-g&gt;&lt;C-f&gt;</code>. This adds nice things like
+        previews, <code>git status</code> notifications on the left side, and
+        the ability to open the file in your browser or open it in your editor,
+        and see a preview (with syntax highlighting if you are using
+        <code>bat</code>).
+    </p>
+    <p>If you are prototyping, often you will make changes to a file that
+        you don’t want to commit, and after you confirm your proof of concept,
+        you will want to <code>git restore</code> those files. Or if you
+        accidentally <code>git add</code> something, you want to
+        <code>git restore --staged</code> it. You might have other changes that
+        you want to keep, so to specify that exact file can be cumbersome.
+        Instead, you can do
+    </p>
+    <div class="sourceCode" id="cb3">
+        <pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"
+                        tabindex="-1"></a><span class="fu">git</span> restore <span class="op">&lt;</span>C-g<span
+                        class="op">&gt;&lt;</span>C-f<span class="op">&gt;</span></span></code></pre>
+    </div>
+    <img src="/images/fzf_git_is_amazing_files.png">
+    <p>and easily find the modified or untracked files, along with a preview
+        to make sure that you are restoring the right ones.</p>
+    <p>A bonus tip is you can select multiple files with <code>Tab</code> or
+        <code>Shift-Tab</code> in the <code>fzf</code> window, so you don’t have
+        to press <code>&lt;C-g&gt;&lt;C-f&gt;</code> multiple times if you want
+        multiple files.
+    </p>
+    <p>This also works for <code>git add</code> of course.</p>
+    <h3 id="combining-it-all-with-checkout">Combining It All With
+        Checkout</h3>
+    <p>If you want to grab a file from a different branches or different
+        commit and pull that into your branch, this would be a massive pain to
+        do manually.</p>
+    <p>With <code>fzf-git</code>, you can do this very easily</p>
+    <div class="sourceCode" id="cb4">
+        <pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true"
+                        tabindex="-1"></a><span class="fu">git</span> checkout <span class="op">&lt;</span>C-g<span
+                        class="op">&gt;&lt;</span>C-b<span class="op">&gt;</span> <span class="op">&lt;</span>C-g<span
+                        class="op">&gt;&lt;</span>C-f<span class="op">&gt;</span></span></code></pre>
+    </div>
+    <p>I think you get the idea. There are also bindings for tags, remotes,
+        stashes, reflogs, worktrees, and <code>for-each-ref</code></p>
+    <h3 id="links">Links</h3>
+    <a href="https://github.com/junegunn/fzf-git.sh">fzf-git
+        repository</a>
+    <a href="https://junegunn.github.io/fzf/examples/git/">fzf-git
+        examples</a>
+
+
+
+</body>
+
+</html>
