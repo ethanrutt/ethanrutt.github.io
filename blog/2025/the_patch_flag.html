@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ethan's Blog</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Blog Website for Ethan Rutt">
+    <meta name="keywords" content="Portfolio, Blog, Ethan, ethanrutt, HTML, CSS, JavaScript, Python, C++, c++, C, c">
+    <meta name="author" content="Ethan Rutt">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/images/ethan_pixelart.png?" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="/style.css" rel="stylesheet">
+    <script src="/script.js"></script>
+</head>
+
+<body>
+    <div class="navbar">
+        <ul>
+            <li><a href="/index.html">home</a></li>
+            <li><a href="/experience.html">experience</a></li>
+            <li><a href="/projects.html">projects</a></li>
+            <li><a href="/blog/index.html">blog</a></li>
+        </ul>
+    </div>
+
+    <h1 style="padding-top: 80px;">The Patch Flag</h1>
+    <p>In <code>git</code>, there is a flag that I rarely see people use,
+        but it’s super helpful and exists on a lot of <code>git</code>
+        commands.</p>
+    <p>This flag is the <code>--patch</code> or <code>-p</code> flag. What
+        does it do? Well it patches of course. Can’t you read? Have you ever
+        opened up a page of documentation in your life? You have? Oh ok, sorry
+        for being so aggressive.</p>
+    <p>I find this to be the main way that I add changes to my working tree
+        now. It allows you to go hunk by hunk and decide what to do with your
+        changes.</p>
+    <p>What’s a hunk? The person reading this. 😉.</p>
+    <p>No, a hunk is a chunk of code that has changes in it.</p>
+    <img src="/images/patch_flag_hunk.png">
+    <p>See those little <code>+</code> signs in the gutter? Those would be
+        hunks.</p>
+    <p><code>git add -p</code> adds your changes as they come up in
+        hunks.</p>
+    <img src="/images/patch_flag_add.png">
+    <p>What are all those letters? Well, you could press <code>?</code> and
+        it would tell you but I guess I’ll type it out here for you. A “thank
+        you” would be nice.</p>
+    <pre><code>y - stage this hunk
+            n - do not stage this hunk
+            q - quit; do not stage this hunk or any of the remaining ones
+            a - stage this hunk and all later hunks in the file
+            d - do not stage this hunk or any of the later hunks in the file
+            s - split the current hunk into smaller hunks
+            e - manually edit the current hunk
+            p - print the current hunk, &#39;P&#39; to use the pager
+            ? - print help</code></pre>
+    <p>Pretty nice huh. I’ll let you figure the rest out yourself.</p>
+    <p>You can also use this with - <code>git checkout -p</code> - This does
+        the same thing. Instead of just checking out entire files from another
+        branch or commit and clobbering your working tree changes, you can do
+        this. If there’s a specific change you want in the file, this is super
+        useful. - <code>git restore -p</code> - Have you ever wanted to
+        partially restore some hunks in a file? - <code>git stash -p</code> -
+        You can pull only certain changes from your stash -
+        <code>git reset -p</code> - But I normally use <code>git restore</code>
+        anyway - <code>git commit -p</code> - This has a patch flag as well
+    </p>
+
+</body>
+
+</html>
